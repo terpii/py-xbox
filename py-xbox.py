@@ -1,6 +1,8 @@
 import requests
 import argparse
+import json
 
+endpoint = 'https://xbl.io'
 
 apikey = ''
 ## read the api key
@@ -20,9 +22,16 @@ if len(apikey) < 5:
 print("Apikey succesfully loaded")
 
 ## creating a sesssion
-global session = requests.session()
-session.headers. = {
+session = requests.session()
+session.headers = {
         'x-authorization':apikey
 }
 
+## functions
+def apiget(url):
+    response = session.get(endpoint + url)
+    return json.loads(response.text)
+def apipost(url, content):
+    response = session.post(endpoint + url, json=content)
+    return response.text
 
