@@ -1,6 +1,7 @@
 import requests
 import argparse
 import json
+import sys
 
 endpoint = 'https://xbl.io'
 
@@ -34,4 +35,20 @@ def apiget(url):
 def apipost(url, content):
     response = session.post(endpoint + url, json=content)
     return response.text
+
+actions = ['help','list-friends', 'list-recents']
+
+# argparse 
+parser = argparse.ArgumentParser(
+        prog= 'pyxbox',
+        description='A command line interface for interacting with xbox')
+
+parser.add_argument('action', default='help',
+                    const='help',
+                    help='the action you want to execute',
+                    nargs='?',
+                    choices=actions)
+args = vars(parser.parse_args())
+
+
 
