@@ -5,9 +5,13 @@ This is a command line python programm that allows you to check xbox messages, f
 ## Setup (for linux)
 
 Go to xbl.io, login with your xbox account and generate a new apikey and write it down somewhere (you can only view it once)
+
 Clone the repository: ``git clone https://github.com/terpii/py-xbox.git && cd py-xbox``
+
 Paste your apikey into a file named api-key : ``echo YOUR-API-KEY-HERE > api-key``
+
 Install the requirements: ``pip3 install -r requirements.txt``
+
 Run it using: ``python3 py-xbox.py``
 
 ## Usage
