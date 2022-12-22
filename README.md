@@ -17,7 +17,9 @@ Run it using: ``python3 py-xbox.py``
 ## Usage
 
 ``python3 py-xbox.py {action} {subaction} {arguments}``
+
 Example ``python3 py-xbox.py friends recents --count 5``
 
 Possible actions: friends, messages, help
+
 to view subactions for each action, just type out the command without a subaction
